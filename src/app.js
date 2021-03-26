@@ -4,6 +4,7 @@ const hbs = require('hbs')
 const geoCode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 const app = express()
+const port = process.env.PORT || 2000
 
 
 //definimi i rrugeve per express
@@ -93,6 +94,6 @@ app.get('*',(req,res)=>{
 })
 
 //to start the server we use this method 
-app.listen(2000, ()=>{
-    console.log('Server is on port 2000 ')
+app.listen(port, ()=>{
+    console.log('Server is on port' + port)
 })
